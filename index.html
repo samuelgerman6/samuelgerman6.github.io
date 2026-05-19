@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Samuel German — Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    :root {
+      --site-scale: 1;
+      --font-scale: 110%;
+
+      --text: #111111;
+      --muted: #555555;
+      --border: #dddddd;
+      --link: #0056b3;
+      --background: #ffffff;
+      --sidebar-background: #f7f7f7;
+
+      --page-width: 1460px;
+      --page-side-padding: 32px;
+
+      --sidebar-width: 400px;
+      --sidebar-padding-x: 36px;
+      --sidebar-padding-y: 28px;
+
+      --sidebar-main-gap: 62px;
+
+      /* Left-side/global sidebar typography */
+      --sidebar-font-size: 1em;
+      --sidebar-line-height: 1.45;
+
+      --sidebar-name-size: 1.35em;
+      --sidebar-name-line-height: 1.2;
+      --sidebar-name-margin-bottom: 12px;
+
+      --sidebar-paragraph-size: 1em;
+      --sidebar-paragraph-margin-bottom: 10px;
+
+      --sidebar-links-size: 1em;
+      --sidebar-links-margin-top: 18px;
+
+      /* Right-side/global main-column typography */
+      --main-font-size: 1.07em;
+      --main-line-height: 1.58;
+
+      --main-heading-size: 2.0561em;
+      --main-heading-line-height: 1.18;
+      --main-heading-margin-bottom: 12px;
+
+      --research-line-font-size: 1.05em;
+      --research-line-margin-bottom: 36px;
+
+      --section-title-size: 1.3551em;
+      --section-title-margin-top: 36px;
+      --section-title-margin-bottom: 20px;
+      --section-title-padding-bottom: 8px;
+
+      --paper-title-size: 1.1215em;
+      --paper-title-margin-bottom: 7px;
+
+      --paper-meta-size: 1em;
+      --paper-meta-margin-bottom: 11px;
+
+      --paper-links-size: 1em;
+      --paper-links-margin-bottom: 13px;
+      --paper-link-gap: 14px;
+
+      --paper-summary-size: 1em;
+
+      --pronunciation-line-font-size: 1em;
+      --pronunciation-icon-gap: 0.5rem;
+
+      --paper-margin-bottom: 32px;
+      --paper-padding-bottom: 26px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 42px var(--page-side-padding);
+
+      display: grid;
+      grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+      gap: var(--sidebar-main-gap);
+      align-items: start;
+
+      zoom: var(--site-scale);
+      font-size: var(--font-scale);
+    }
+
+    .sidebar {
+      background: var(--sidebar-background);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: var(--sidebar-padding-y) var(--sidebar-padding-x);
+      align-self: start;
+      position: sticky;
+      top: 24px;
+
+      font-size: var(--sidebar-font-size);
+      line-height: var(--sidebar-line-height);
+    }
+
+    .headshot {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0;
+      display: block;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+     
+    
+    }
+
+    .sidebar h1 {
+      font-size: var(--sidebar-name-size);
+      margin: 0 0 8px 0;
+      line-height: var(--sidebar-name-line-height);
+    }
+
+    .sidebar-info {
+      display: grid;
+      row-gap: 0.55rem;
+      margin-top: 0.15rem;
+    }
+
+    .sidebar .sidebar-info p {
+      margin: 0;
+      color: var(--muted);
+      font-size: var(--sidebar-paragraph-size);
+      line-height: 1.4;
+    }
+
+    .sidebar-info-group {
+      display: grid;
+      row-gap: 0.28rem;
+    }
+
+    .email-line {
+      padding-top: 0.45rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .pronunciation-line {
+      display: flex;
+      align-items: center;
+      gap: var(--pronunciation-icon-gap);
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    .pronunciation-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0;
+      padding: 0;
+      border: none;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    .pronunciation-button svg {
+      width: 1.2em;
+      height: 1.2em;
+      display: block;
+    }
+
+    .pronunciation-button:hover {
+      opacity: 0.75;
+    }
+
+    .pronunciation-button:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    .sidebar p {
+      margin: 0 0 var(--sidebar-paragraph-margin-bottom) 0;
+      color: var(--muted);
+      font-size: var(--sidebar-paragraph-size);
+    }
+
+    .sidebar .links {
+      margin-top: var(--sidebar-links-margin-top);
+      font-size: var(--sidebar-links-size);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      min-width: 0;
+      font-size: var(--main-font-size);
+      line-height: var(--main-line-height);
+    }
+
+    main h2 {
+      font-size: var(--main-heading-size);
+      margin: 0 0 var(--main-heading-margin-bottom) 0;
+      line-height: var(--main-heading-line-height);
+    }
+
+    .research-line {
+      color: var(--muted);
+      font-size: var(--research-line-font-size);
+      margin-top: 0;
+      margin-bottom: var(--research-line-margin-bottom);
+    }
+
+    .section-title {
+      font-size: var(--section-title-size);
+      margin: var(--section-title-margin-top) 0 var(--section-title-margin-bottom) 0;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: var(--section-title-padding-bottom);
+      line-height: 1.25;
+    }
+
+    .paper {
+      margin-bottom: var(--paper-margin-bottom);
+      padding-bottom: var(--paper-padding-bottom);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .paper:last-child {
+      border-bottom: none;
+    }
+
+    .paper-title {
+      font-weight: 700;
+      font-size: var(--paper-title-size);
+      margin: 0 0 var(--paper-title-margin-bottom) 0;
+      line-height: 1.3;
+    }
+
+    .paper-meta {
+      margin: 0 0 var(--paper-meta-margin-bottom) 0;
+      color: var(--muted);
+      font-size: var(--paper-meta-size);
+    }
+
+    .paper-links {
+      margin: 0 0 var(--paper-links-margin-bottom) 0;
+      font-size: var(--paper-links-size);
+    }
+
+    .paper-links a {
+      margin-right: var(--paper-link-gap);
+      font-weight: 500;
+    }
+
+    .paper-summary {
+      margin: 0;
+      font-size: var(--paper-summary-size);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 28px 18px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .headshot {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <img src="headshot.jpg" alt="Samuel German" class="headshot">
+
+      <h1>Samuel German</h1>
+
+      <div class="sidebar-info">
+        <p class="pronunciation-line">
+          <span>Last name pronunciation:</span>
+          <button class="pronunciation-button"
+          type="button"
+          onclick="playNamePronunciation()"
+          aria-label="Play pronunciation of Samuel German's last name">
+    <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.06A4.5 4.5 0 0 0 16.5 12zm-2.5-9.5v2.06A8 8 0 0 1 14 19.44v2.06A10 10 0 0 0 14 2.5z"/>
+    </svg>
+  </button>
+        </p>
+
+        <div class="sidebar-info-group">
+          <p>M.S. Computer Science, UC San Diego</p>
+          <p>B.A. Computer Science, UC Berkeley</p>
+        </div>
+
+        <p class="email-line">Email: sgerman [at] ucsd [dot] edu</p>
+      </div>
+      <audio id="name-pronunciation-audio" src="pronunciation.mp3" preload="none"></audio>
+    </aside>
+
+    <main>
+      <h2>Samuel German — Research</h2>
+
+      <p class="research-line">
+        I work on graph algorithms,
+        parameterized complexity, and discrete mathematics.
+      </p>
+
+      <h3 class="section-title">Selected Publications</h3>
+
+      <article class="paper">
+        <p class="paper-title">
+          The Path-Extremal Conjecture for Zero Forcing: Distance-Hereditary Graphs and a Split-Decomposition Reduction
+        </p>
+
+        <p class="paper-meta">
+          Samuel German.<br>
+          Accepted to the International Computing and Combinatorics Conference (COCOON 2026); proceedings version to appear in Springer LNCS.
+        </p>
+
+        <p class="paper-links">
+          <a href="https://arxiv.org/abs/2605.10836">arXiv</a>
+          
+        </p>
+
+        <p class="paper-summary">
+         Proves the zero-forcing path-extremal conjecture for distance-hereditary graphs
+and develops a split-decomposition reduction that reduces the unique-prime-bag
+case to finite verification of bounded split-prime cores.
+        </p>
+      </article>
+
+      <article class="paper">
+        <p class="paper-title">
+          Strong Conflict-Free Vertex-Connection via Twin Cover: Kernelization and Chromatic Bounds
+        </p>
+
+        <p class="paper-meta">
+          Samuel German.<br>
+          Accepted to the International Computing and Combinatorics Conference (COCOON 2026); proceedings version to appear in Springer LNCS.
+        </p>
+
+        <p class="paper-links">
+          <a href="https://arxiv.org/abs/2605.13299">arXiv</a>
+        
+        </p>
+
+        <p class="paper-summary">
+           Gives a kernel for Strong CFVC Number parameterized by \(\operatorname{tc}(G)+k\); in particular, for each fixed \(k\), this yields fixed-parameter tractability parameterized by twin-cover number. It also proves that for graphs with twin cover \(X\), the strong conflict-free vertex-connection number is at most \(\chi(G)+|X|\).
+        </p>
+      </article>
+
+      <article class="paper">
+        <p class="paper-title">
+          Layer-Based Width for PAFP
+        </p>
+
+        <p class="paper-meta">
+          Samuel German.<br>
+          Accepted to the International Workshop on Combinatorial Algorithms (IWOCA 2026); invited to submit for special issue of Discrete Mathematics & Theoretical Computer Science (DMTCS). Proceedings version to appear in Springer LNCS.
+        </p>
+
+        <p class="paper-links">
+          <a href="https://arxiv.org/abs/2605.12457">arXiv</a>
+         
+        </p>
+
+        <p class="paper-summary">
+       Introduces layer-based width parameters for the Path Avoiding Forbidden Pairs problem via both the union digraph
+  \(G \cup \mathcal{F}\) and the input graph \(G\), and proves a sharp union-digraph contrast:
+  bounded union BFS-width together with bounded backward arcs yields an FPT algorithm, whereas
+  bounded union BFS-width alone remains \(\mathsf{NP}\text{-}\)hard already at width \(2\).
+  On the input-graph side, it gives the first tractability regimes for PAFP with unrestricted
+  forbidden pairs, including FPT for BFS-width \(2\) with bounded backward input arcs
+  and polynomial time for exact-length width \(2\), both tight against width-\(3\) hardness.
+        </p>
+      </article>
+    </main>
+  </div>
+  <script>
+    function playNamePronunciation() {
+      const audio = document.getElementById("name-pronunciation-audio");
+      audio.currentTime = 0;
+      audio.play();
+    }
+  </script>
+</body>
+</html>
