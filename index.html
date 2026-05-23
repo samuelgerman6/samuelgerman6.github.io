@@ -229,12 +229,18 @@
       line-height: var(--main-heading-line-height);
     }
 
-    .research-line {
-      color: var(--muted);
-      font-size: var(--research-line-font-size);
-      margin-top: 0;
-      margin-bottom: var(--research-line-margin-bottom);
-    }
+   .research-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-bottom: var(--research-line-margin-bottom);
+}
+
+.research-line {
+  color: var(--muted);
+  font-size: var(--research-line-font-size);
+  margin: 0;
+}
 
     .section-title {
       font-size: var(--section-title-size);
@@ -334,10 +340,23 @@
     <main>
       <h2>Samuel German — Research</h2>
 
-      <p class="research-line">
-      I work in theoretical computer science, especially parameterized complexity, automata theory, and computability-theoretic learning. A common theme in my work is obtaining exact structural characterizations, such as tractability and hardness thresholds for discrete problems and accepting-state spectra for automata operations.
-      </p>
+    
 
+
+
+        <div class="research-lines">
+  <p class="research-line">
+I work in theoretical computer science, especially parameterized complexity, automata theory, and computability-theoretic learning. A common theme in my work is obtaining exact structural characterizations, such as tractability and hardness thresholds for discrete problems and accepting-state spectra for automata operations.
+  </p>
+
+  <p class="research-line">
+  
+          I also care about teaching and mathematical exposition; at UC Berkeley, I worked for a year as a course tutor for CS 70, Discrete Mathematics and Probability Theory.
+  </p>
+</div>
+
+        
+        
       <h3 class="section-title">Selected Publications</h3>
 
       <article class="paper">
