@@ -101,6 +101,32 @@
       font-size: var(--font-scale);
     }
 
+      .link-with-footnote {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Remove any general right margin applied to links */
+.paper-links .link-with-footnote > a {
+  margin-right: 0;
+}
+
+.footnote-ref {
+  margin-left: 0.08em;
+  font-size: 0.7em;
+  font-weight: normal;
+  line-height: 0;
+  vertical-align: super;
+  color: inherit;
+}
+
+.paper-footnote {
+  margin-top: 0.65rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #555;
+}
+
     .sidebar {
       background: var(--sidebar-background);
       border: 1px solid var(--border);
@@ -346,11 +372,11 @@
 
         <div class="research-lines">
   <p class="research-line">
-I work in theoretical computer science, especially parameterized complexity, automata theory, and computability-theoretic learning. A common theme in my work is obtaining exact structural characterizations, such as tractability and hardness thresholds for discrete problems and accepting-state spectra for automata operations.
+I work in theoretical computer science, especially graph theory, parameterized algorithms, and automata theory. A common theme in my work is obtaining exact structural characterizations, such as tractability and hardness thresholds for discrete problems and accepting-state spectra for automata operations.
   </p>
 
   <p class="research-line">
-I also care about teaching and mathematical exposition; I served for a year as a tutor on the course staff for UC Berkeley’s CS 70, Discrete Mathematics and Probability Theory.
+I also care about teaching and mathematical exposition; I served for a year on the course staff for UC Berkeley’s CS 70, Discrete Mathematics and Probability Theory, first as an academic intern and then as a tutor. 
       
       
   </p>
@@ -367,18 +393,21 @@ I also care about teaching and mathematical exposition; I served for a year as a
 
         <p class="paper-meta">
           Samuel German.<br>
-          Accepted to the International Computing and Combinatorics Conference (COCOON 2026); proceedings version to appear in Springer LNCS.
+          Published in the Proceedings of the 32nd International Computing and Combinatorics Conference (COCOON 2026)
         </p>
 
         <p class="paper-links">
+            <a href="https://doi.org/10.1007/978-981-92-3309-0_31">DOI</a>
           <a href="https://arxiv.org/abs/2605.10836">arXiv</a>
+            
           
         </p>
 
         <p class="paper-summary">
-         Proves the zero-forcing path-extremal conjecture for distance-hereditary graphs
-and develops a split-decomposition reduction that reduces the unique-prime-bag
-case to finite verification of bounded split-prime cores.
+Proves the zero-forcing path-extremal conjecture for distance-hereditary graphs and additionally uses canonical split decomposition to reduce the conjecture on an infinite class of graphs -- those with a unique prime bag of bounded size -- to finitely many checks on bounded-order split-prime cores.
+        
+            
+        
         </p>
       </article>
 
@@ -389,18 +418,21 @@ case to finite verification of bounded split-prime cores.
 
         <p class="paper-meta">
           Samuel German.<br>
-          Accepted to the International Computing and Combinatorics Conference (COCOON 2026); proceedings version to appear in Springer LNCS.
+          Published in the Proceedings of the 32nd International Computing and Combinatorics Conference (COCOON 2026)
         </p>
 
         <p class="paper-links">
-          <a href="https://arxiv.org/abs/2605.13299">arXiv</a>
+             <a href="https://doi.org/10.1007/978-981-92-3309-0_30">DOI</a>
+          <a href="https://arxiv.org/abs/2605.13299">arXiv</a> 
+           
+            
+          
         
         </p>
 
         <p class="paper-summary">
 
-        
-              Gives a kernel for deciding whether the strong conflict-free vertex-connection number of
+         Gives a kernel for deciding whether the strong conflict-free vertex-connection number of
   \(G\) is at most \(k\), parameterized by the twin-cover number of \(G\) and the target
   number of colors \(k\). It also proves that for a twin cover \(X\), the strong
   conflict-free vertex-connection number lies between the chromatic number \(\chi(G)\) and
@@ -417,11 +449,22 @@ case to finite verification of bounded split-prime cores.
         <p class="paper-meta">
           Samuel German.<br>
 
-            Accepted to the International Workshop on Combinatorial Algorithms (IWOCA 2026); invited to submit to a special issue of the journal Discrete Mathematics & Theoretical Computer Science (DMTCS). Proceedings version to appear in Springer LNCS.
+            Published in the Proceedings of the 37th International Workshop on Combinatorial Algorithms (IWOCA 2026)
          </p>
 
+          
         <p class="paper-links">
-          <a href="https://arxiv.org/abs/2605.12457">arXiv</a>
+ <a href="https://doi.org/10.1007/978-3-032-27732-9_22">DOI</a>
+            
+          
+             <span class="link-with-footnote">
+    <a href="https://arxiv.org/abs/2605.12457">Extended arXiv version</a><sup
+      class="footnote-ref"
+      aria-label="Footnote 1"
+    >1</sup>
+  </span>
+            
+        
          
         </p>
 
@@ -432,8 +475,19 @@ case to finite verification of bounded split-prime cores.
   bounded union BFS-width alone remains \(\mathsf{NP}\text{-}\)hard already at width \(2\).
   On the input-graph side, it gives the first tractability regimes for PAFP with unrestricted
   forbidden pairs, including FPT for BFS-width \(2\) with bounded backward input arcs
-  and polynomial time for exact-length width \(2\), both tight against width-\(3\) hardness.
+  and polynomial time for exact-length width \(2\), both of which results, the paper shows, are tight against width-\(3\) hardness.
+
+    
         </p>
+
+          <p class="paper-footnote">
+  <sup>1</sup>
+  The difference between the arXiv version and the version identified by the DOI is that the former contains the two bounded backward arcs results in the above paper description, whereas the latter doesn't. My other papers featured here contain no substative differences between their arXiv and DOI versions. 
+              
+              
+              
+    
+</p>
       </article>
     </main>
   </div>
