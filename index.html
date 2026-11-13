@@ -18,7 +18,7 @@
       --background: #ffffff;
       --sidebar-background: #f7f7f7;
 
-      --page-width: 1460px;
+      --page-width: 1310px;
       --page-side-padding: 32px;
 
       --sidebar-width: 400px;
@@ -380,11 +380,11 @@
 
         <div class="research-lines">
   <p class="research-line">
-I work in theoretical computer science, especially graph theory, parameterized algorithms, and automata theory. A common theme in my work is obtaining exact structural characterizations, such as tractability and hardness thresholds for discrete problems and accepting-state spectra for automata operations.
+I work in theoretical computer science, especially graph theory, combinatorial optimization, and automata theory. A common theme in my work is obtaining exact structural characterizations, such as tractability and hardness thresholds for discrete problems and accepting-state spectra for automata operations.
   </p>
 
   <p class="research-line">
-I also care about teaching and mathematical exposition; I served for a year on the course staff for UC Berkeley’s CS 70, Discrete Mathematics and Probability Theory, first as an academic intern and then as a tutor. 
+I also care about teaching and mathematical exposition; I served for a year on the course staff of UC Berkeley’s CS 70, Discrete Mathematics and Probability Theory, first as an academic intern and then as a tutor. 
       
       
   </p>
@@ -392,28 +392,61 @@ I also care about teaching and mathematical exposition; I served for a year on t
 
         
         
-      <h3 class="section-title">Selected Publications</h3>
+      <h3 class="section-title">Selected Publications and Preprints</h3>
+
 
       <article class="paper">
         <p class="paper-title">
-          The Path-Extremal Conjecture for Zero Forcing: Distance-Hereditary Graphs and a Split-Decomposition Reduction
+          Lettericity Is \(\mathsf{NP}\text{-}\)Complete
         </p>
 
         <p class="paper-meta">
-          Samuel German.<br>
-          Published in the Proceedings of the 32nd International Computing and Combinatorics Conference (COCOON 2026)
+          Henning Fernau, Samuel German, Kevin Mann, and Nils Morawietz.<br>
+          Submitted to the 44th Symposium on Theoretical Aspects of Computer Science (STACS 2027)
         </p>
 
         <p class="paper-links">
-            <a href="https://doi.org/10.1007/978-981-92-3309-0_31">DOI</a>
-          <a href="https://arxiv.org/abs/2605.10836">arXiv</a>
-            
-          
+          <a href="https://arxiv.org/abs/2609.28023">arXiv</a>
         </p>
 
         <p class="paper-summary">
-Proves the zero-forcing path-extremal conjecture for distance-hereditary graphs and additionally uses canonical split decomposition to reduce the conjecture on an infinite class of graphs -- those with a unique prime bag of bounded size -- to finitely many checks on bounded-order split-prime cores.
-        
+          Proves that deciding the lettericity of a graph is \(\mathsf{NP}\text{-}\)complete, which resolves an open question repeatedly asked in recent literature. Also proves that the coloring
+          extension, word extension, and decoder extension problems are
+          \(\mathsf{NP}\text{-}\)complete, resolving another three open problems. For deciding whether the lettericity of a graph on \(n\) vertices is at most \(k\), gives a FPT
+          algorithm
+          with respect to the dual parameter \(n-k\)  running in \(2^{\mathcal{O}((n-k)^2)} + \mathcal{O}(n)\)-time.
+<br><br>
+My main contribution to this paper was the proof that Lettericity is \(\mathsf{NP}\text{-}\)complete.
+
+    </p>
+      </article>
+
+      <article class="paper">
+        <p class="paper-title">
+          Robust Decision-Dependent Information Discovery Is Harder
+          Than Robust Optimization
+        </p>
+
+        <p class="paper-meta">
+          Xiaoyu Chen, Samuel German, Jérémy Omer, and Michaël Poss.<br>
+          Submitted to the journal <em>Mathematics of Operations Research</em>
+        </p>
+
+        <p class="paper-links">
+          <a href="https://hal.science/hal-05838827v2">HAL</a>
+        </p>
+
+        <p class="paper-summary">
+
+Shows that robust optimization with DDID is \(\mathsf{NP}\text{-}\)complete even when the underlying nominal problem has only \(\mathcal{O}(n^2)\) feasible solutions. Interestingly, this result indicates that giving the decision maker in the classical robust \(p\)-selection problem the ability to choose which uncertain values to observe before making a decision actually makes the problem harder to optimize efficiently, even if we were to give the decision maker fewer choices to choose from in the underlying nominal problem, as classical robust \(p\)-selection is known to be in \(\mathsf{P}\). We also provide a polynomial-time algorithm for the selection version of DDID when all maximum cost deviations \(d_i\) are equal, even when both the number of items selected and the number of uncertain cost parameters observed beforehand are part of the input.
+<br><br>
+
+My contribution to this paper was proving that robust optimization with DDID is \(\mathsf{NP}\text{-}\)hard even when the underlying nominal problem has only \(\mathcal{O}(n^2)\) feasible solutions.
+        </p>
+      </article>
+
+
+               
             
         
         </p>
@@ -431,7 +464,13 @@ Proves the zero-forcing path-extremal conjecture for distance-hereditary graphs 
 
         <p class="paper-links">
              <a href="https://doi.org/10.1007/978-981-92-3309-0_30">DOI</a>
-          <a href="https://arxiv.org/abs/2605.13299">arXiv</a> 
+          <span class="link-with-footnote">
+            <a href="https://arxiv.org/abs/2605.13299">arXiv</a><sup
+              class="footnote-ref"
+              aria-label="Footnote 1"
+              aria-describedby="shared-arxiv-footnote"
+            >1</sup>
+          </span> 
            
             
           
@@ -449,56 +488,55 @@ Proves the zero-forcing path-extremal conjecture for distance-hereditary graphs 
         </p>
       </article>
 
-      <article class="paper">
+       <article class="paper">
         <p class="paper-title">
-          Layer-Based Width for PAFP
+          A Unary-to-Nonunary Transition in the Accepting-State Spectrum
+          of Right Quotient for Permutation Automata
         </p>
 
         <p class="paper-meta">
           Samuel German.<br>
+          Published in the Proceedings of the 27th International
+Conference on Descriptional Complexity of Formal Systems (DCFS 2026)
+        </p>
 
-            Published in the Proceedings of the 37th International Workshop on Combinatorial Algorithms (IWOCA 2026)
-         </p>
-
-          
         <p class="paper-links">
- <a href="https://doi.org/10.1007/978-3-032-27732-9_22">DOI</a>
-            
-          
-             <span class="link-with-footnote">
-    <a href="https://arxiv.org/abs/2605.12457">Extended arXiv version</a><sup
-      class="footnote-ref"
-      aria-label="Footnote 1"
-    >1</sup>
-  </span>
-            
-        
-         
+          <a href="https://doi.org/10.1007/978-3-032-32016-2_7">DOI</a>
+          <span class="link-with-footnote">
+            <a href="https://arxiv.org/abs/2605.10852">arXiv</a><sup
+              class="footnote-ref"
+              aria-label="Footnote 1"
+              aria-describedby="shared-arxiv-footnote"
+            >1</sup>
+          </span>
         </p>
 
         <p class="paper-summary">
-       Introduces layer-based width parameters for the Path Avoiding Forbidden Pairs problem via both the union digraph
-  \(G \cup \mathcal{F}\) and the input graph \(G\), and proves a sharp union-digraph contrast:
-  bounded union BFS-width together with bounded backward arcs yields an FPT algorithm, whereas
-  bounded union BFS-width alone remains \(\mathsf{NP}\text{-}\)hard already at width \(2\).
-  On the input-graph side, it gives the first tractability regimes for PAFP with unrestricted
-  forbidden pairs, including FPT for BFS-width \(2\) with bounded backward input arcs
-  and polynomial time for exact-length width \(2\), both of which results, the paper shows, are tight against width-\(3\) hardness.
+          Determines the exact accepting-state spectrum of right quotient
+          for permutation automata, resolving an open problem of Rauch
+          and Holzer. 
+For fixed accepting-state complexities \(m,n\ge 1\)
+of the operand languages, this paper shows the spectrum is
+\(\{1,\ldots,mn\}\) in the unary case, but
+\(\mathbb{N}_{>0}\) when arbitrary alphabets
+are permitted.
 
-    
+         The arXiv version further shows that, even when the input alphabet is restricted to two symbols, every positive accepting-state complexity can be realized by the right quotient for each fixed pair \(m,n\ge1\).
         </p>
 
-          <p class="paper-footnote">
-  <sup>1</sup>
-  The difference between the arXiv version and the version identified by the DOI is that the former contains the two bounded backward arcs results in the above paper description, whereas the latter doesn't. My other papers featured here contain no substative differences between their arXiv and DOI versions. 
-              
-              
-              
-    
-</p>
+        <p class="paper-footnote" id="shared-arxiv-footnote">
+          <sup>1</sup>
+          For my COCOON and DCFS papers, the arXiv version contains a strengthened result; both papers were among a select few from their respective conferences whose authors were invited to submit extended versions to a special issue of some journal, and these strengthened results were obtained in preparation for these invited submissions.
+
+
+        </p>
       </article>
+              
+
     </main>
   </div>
+
+
   <script>
     function playNamePronunciation() {
       const audio = document.getElementById("name-pronunciation-audio");
